@@ -17,21 +17,10 @@ const Navbar = () => {
     <img src={logo} alt=""  class="logo"/>
     <ul>
         <li><a href="./">Home</a></li>
-        <li><a href="../../Prod">Products</a></li>
-        <li>
-        <div className="dropdown">
-    
-        
-        <a href="../../Service">Services</a>
-        <div className="dropdown-content">
-          <a href="../../Service">Plumbing& Gas</a>
-          <a href="../../Service/Fire">Fire Protection</a>
-          
-        </div>
-        </div>
-        </li>
-        
-        
+        <li><a href="#spotlight">Spotlight</a></li>
+        <li> <a href="#about">About Us</a>       </li>
+        <li><a href="#services" className="href">Service</a></li>
+         
         <li><a href="../../About">Meet the Team</a></li>
        
         

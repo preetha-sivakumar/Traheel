@@ -1,0 +1,31 @@
+.about-container{
+    padding-top:30px;
+}
+.about-title .about-h2{
+    font-size: 100px;
+    font-weight: 150;
+    color: #5d508d;
+    align-items: left;
+    justify-items: left;
+    padding-left: 40px;
+    text-align: left;
+    
+ }
+ 
+ .acontainer{
+    padding-right: 15px;
+    padding-left: 15px;
+ }
+ .row-aligns-item-center{
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+ }
+ .col-lg{
+    flex: 0 0 auto;
+    width: 50%;
+    background-color: #5d508d;
+ }
+ 
