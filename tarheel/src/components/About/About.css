@@ -1,5 +1,7 @@
 .about-container{
     padding-top:30px;
+    height: 800px;
+    margin-bottom: 30px;
 }
 .about-title .about-h2{
     font-size: 100px;
@@ -19,13 +21,134 @@
  .row-aligns-item-center{
     margin-right: -15px;
     margin-left: -15px;
-    align-items: center;
+    /* align-items: center; */
     display: flex;
     flex-wrap: wrap;
  }
  .col-lg{
     flex: 0 0 auto;
     width: 50%;
-    background-color: #5d508d;
+    /* background-color: #5d508d; */
  }
- 
+ .about-img{
+    position: relative;
+  /* max-width:670px; */
+  top: 0;
+  left: 0;
+ }
+ .image-left {
+    position: relative;
+    max-width:60%;
+    top: 0;
+    margin-left: 40px;
+    z-index: 1;
+    border-radius: 20px;
+  }
+  .image-right {
+    position: absolute;
+    max-width:40%;
+    top: 70%;
+    left: 50%;
+    z-index: 3;
+    border-radius: 20px;
+    border: 10px solid;
+    border-color: white;
+    
+  }
+   .about-experience{
+     position: absolute;
+     max-width:40%;
+     top: 0%;
+     left: 50%;
+     z-index: 3;
+     height: 200px;
+     width: 200px;
+     animation: rotation 8s infinite linear;
+     
+     
+  } 
+   /* @keyframes rotation{
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+  }  */
+
+  .aheading .ah3{
+    font-size: 60px;
+    font-weight: 300;
+   
+    color: rgb(241, 106, 106);
+    align-items: left !important;
+    justify-items: left;
+    padding-left: 40px;
+    text-align: left;
+    margin-top:0 ;
+  }
+
+  .aheading .diff{
+    font-size: 60px;
+    font-weight: 120;
+    color: #5d508d;
+  }
+
+  .aheading .descrip{
+    color:#5d508d;
+    font-size: 25px;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 40px;
+  }
+
+  .features{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 20px;
+   
+  }
+
+  
+  .features .icon-img{
+    height:45px;
+    width:45px;
+
+  }
+  .features li{
+    position: relative;
+    width: calc(50% - 10px);
+    font-weight: 600;
+    color: #5d508d;
+  
+    padding-left: 40px;
+    display: flex; /* Use flexbox to align items */
+    align-items: center; 
+  }
+
+  .features li .des{
+    text-align: center;
+    top:0;
+    padding-left: 15px;
+    font-size: 20px;
+  }
+
+  .parallax-fire{
+     /* The image used */
+     background-image: url("../../assets/bg1.png");
+      
+     /* Set a specific height */
+     min-height: 400px; 
+   
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-top: 30px;
+  }
