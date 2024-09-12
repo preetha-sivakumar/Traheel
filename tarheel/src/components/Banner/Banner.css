@@ -9,12 +9,30 @@
     align-items: center;
     justify-content: center;
     position: relative;
+
+    margin-left: 0;
 }
 
 .hero-text{
-    text-align: center;
+    text-align: left;
+    /* margin-left: 20px; */
     max-width: 800px;
+    animation: 2s fadeInUp;
 }
+.hero-text .color{
+  color: rgb(241, 106, 106);
+}
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 
 .hero-text h1{
     font-size: 60px;
@@ -50,3 +68,6 @@
     background-color: #16235e;
     color: white;
   }
+
+
+  

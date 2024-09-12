@@ -1,12 +1,15 @@
 import React from 'react'
 import './Banner.css'
 import arrow from '../../assets/dark-arrow.png'
+import img from '../../assets/img.png'
+import img2 from '../../assets/img-2.png'
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
 const Banner = () => {
   return (
-    <div class="hero containernav">
+    <div class="hero ">
+       
         <div class="hero-text">
-            <h1>Providing High Quality Workmanship</h1>
+            <h1>Your <span class="color">Health,</span><br />Our <span class="color">Priority.</span>.</h1>
             <p>Based in Singapore, M-Stars Engineering & Construction is your reliable source for construction solutions. You can expect highly trained professionals who are skilled in Mechanical & Electrical works, Plumbing, Sanitary, Gas and Fire Protection Services. </p>
             <button class="btnnav">Explore More <img src={arrow} alt="" /></button>
         </div>

@@ -4,7 +4,7 @@ import dev from '../../assets/delivery.png'
 import vac from '../../assets/vaccine.png'
 const Announcement = () => {
   return (
-    <div class="hero-1">
+    <div class="hero-1" id="hero-1">
   <div class="diagonal-hero-bg">
      <div class="stars">
         <div class="small"></div>

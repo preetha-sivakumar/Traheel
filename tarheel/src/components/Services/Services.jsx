@@ -94,7 +94,7 @@ export const Services = () => {
     };
   }, []);
   return (
-    <div className="serv-cont">
+    <div className="serv-cont" id="service-container">
         <div className="stitle">
     <h2 class="seh2">Our Services</h2>
     <h3 class="seh3">We are committed to friendly and accessible service.</h3>
