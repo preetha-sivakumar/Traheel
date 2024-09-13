@@ -9,8 +9,42 @@ const Banner = () => {
     <div class="hero ">
        
         <div class="hero-text">
-            <h1>Your <span class="color">Health,</span><br />Our <span class="color">Priority.</span>.</h1>
-            <p>Based in Singapore, M-Stars Engineering & Construction is your reliable source for construction solutions. You can expect highly trained professionals who are skilled in Mechanical & Electrical works, Plumbing, Sanitary, Gas and Fire Protection Services. </p>
+          <div className="animated-heading">
+            <span>Y</span>
+            <span>o</span>
+            <span>u</span>
+            <span>r</span>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            
+            <span class="color">H</span>
+            <span class="color">E</span>
+            <span class="color">A</span>
+            <span class="color">L</span>
+            <span class="color">T</span>
+            <span class="color">H</span>
+            <span class="color">,</span>
+            <br />
+ 
+            <span>O</span>
+            <span>u</span>
+            <span>r</span>
+
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <span class="color">P</span>
+            <span class="color">R</span>
+            <span class="color">I</span>
+            <span class="color">O</span>
+            <span class="color">R</span>
+            <span class="color">I</span>
+            <span class="color">T</span>
+            <span class="color">Y</span>
+            <span class="color">.</span>
+          </div>
+            <p>Dedicated to your well-being with expert advice and reliable pharmacy <br/>services. Visit us for all your health needs. </p>
             <button class="btnnav">Explore More <img src={arrow} alt="" /></button>
         </div>
     </div>

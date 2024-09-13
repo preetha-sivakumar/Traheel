@@ -20,7 +20,17 @@ const Announcement = () => {
       </div>
    </div>
    <div className="title">
-    <h2 class="sh2">Spotlight</h2>
+    <h2 class="sh2">
+            <span>S</span>
+            <span>p</span>
+            <span>o</span>
+            <span>t</span>
+            <span>l</span>
+            <span>i</span>
+            <span>g</span>
+            <span>h</span>
+            <span>t</span>
+    </h2>
     <h3 class="sh3">What's new?</h3>
    </div>
    <div className="cards">

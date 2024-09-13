@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
 import icon from '../../assets/icon.png'
-import exp from '../../assets/exp1.png'
+import exp from '../../assets/exp2.png'
 import pic2 from '../../assets/pic2.png'
 import pills from '../../assets/pills.png'
 const About = () => {
@@ -9,7 +9,19 @@ const About = () => {
     <>
     <div className="about-container" id="about-container">
         <div className="about-title">
-          <h2 class="about-h2">About Us</h2>
+          <h2 class="about-h2">
+            <span>A</span>
+            <span>b</span>
+            <span>o</span>
+            <span>u</span>
+            <span>t</span>
+             &nbsp;
+             
+            <span>U</span>
+            <span>s</span>
+          
+            
+          </h2>
         </div>
         <div className="acontainer">
             <div className="row-aligns-item-center">
@@ -34,24 +46,8 @@ const About = () => {
                 <div className="about-img">
                     <img class="image-left" data-src="" src={pic2} alt="Image Left" title="Image Left"  />
                     <img class="image-right" data-src="" src={pills} alt="Image Right" title="Image Left" />
-                    <div className="about-experience">
-                    <div class="donut">
-      {/* <!-- Curved Text using SVG --> */}
-      <svg viewBox="0 0 200 200">
-        {/* <!-- Define a circular path for the text --> */}
-        <path id="textPath" fill="none" stroke="transparent" d="M 50,100 A 50,50 0 1,1 150,100 A 50,50 0 1,1 50,100" />
-        {/* <path id="textPath" fill="none" stroke="transparent" d="M 40,100 A 60,60 0 1,1 160,100" /> */}
-
-        {/* <!-- Text following the circular path --> */}
-        <text fill="#5d508d" font-size="30" font-weight="bold" letterSpacing={8} padding-bottom="15" margin-bottom={5}>
-          <textPath href="#textPath" startOffset="25%">
-            SINCE  2017
-          </textPath>
-        </text>
-      </svg>
-    </div>
-                    </div>
-                     {/* <img class="about-experience" src={exp} alt=""  />  */}
+                   
+                     <img class="about-experience" src={exp} alt=""  /> 
                      <div class="testing"></div>
                     </div>
                 </div>
