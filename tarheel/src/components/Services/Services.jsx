@@ -1,4 +1,4 @@
-import React,{useEffect,useRef } from 'react'
+import React,{useEffect,useRef} from 'react'
 import './Services.css'
 import serv from '../../assets/servs.jpg'
 import dog from '../../assets/dog.png'

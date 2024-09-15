@@ -4,6 +4,8 @@
     margin-bottom: 30px;
     scroll-margin-top: 70px;
 }
+
+
 .about-title .about-h2{
     font-size: 100px;
     font-weight: 150;
@@ -12,8 +14,12 @@
     justify-items: left;
     padding-left: 40px;
     text-align: left;
-    animation: 0.5s fadeIn forwards;
+    /* animation: 0.5s fadeIn forwards; */
     
+ }
+
+ .about-title .about-h2.animate{
+  animation: 0.5s fadeIn forwards;
  }
 
  .about-title .about-h2 span{
@@ -95,6 +101,9 @@
    
     
   }
+ 
+
+  
  
   .image-right {
     position: absolute;
@@ -183,11 +192,13 @@
     padding-top: 10px;
     padding-bottom: 10px;
     margin-left: 40px;
-    animation: 2s fadeInUp;
+     animation: 2s fadeInUp;
     animation-fill-mode: backwards;
-    animation-delay: 2s;
+    animation-delay: 2s; 
+  
   }
 
+ 
   @keyframes fadeInUp {
     0% {
       transform: translateY(100%);
