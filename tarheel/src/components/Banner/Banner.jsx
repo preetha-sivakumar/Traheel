@@ -3,6 +3,7 @@ import './Banner.css'
 import arrow from '../../assets/dark-arrow.png'
 import img from '../../assets/img.png'
 import img2 from '../../assets/img-2.png'
+import ani from '../../assets/shipping-line-animation.svg'
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
 const Banner = () => {
   return (
@@ -46,6 +47,17 @@ const Banner = () => {
           </div>
             <p>Dedicated to your well-being with expert advice and reliable pharmacy <br/>services. Visit us for all your health needs. </p>
             <button class="btnnav">Explore More <img src={arrow} alt="" /></button>
+           
+            <object type="image/svg+xml" data={ani} ></object>
+
+
+            
+
+
+
+            
+
+
         </div>
     </div>
   )

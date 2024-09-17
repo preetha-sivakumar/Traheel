@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import './About.css'
 import icon from '../../assets/icon.png'
 import exp from '../../assets/exp2.png'
@@ -6,31 +6,11 @@ import pic2 from '../../assets/pic2.png'
 import pills from '../../assets/pills.png'
 const About = () => {
 
-  const [inView, setInView] = useState(false);
-
-  const handleScroll = () => {
-    const aboutContainer = document.getElementById('about-container');
-    if (aboutContainer) {
-      const rect = aboutContainer.getBoundingClientRect();
-      // Check if the aboutContainer is in the viewport
-      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-        setInView(true);
-      }
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   
   return (
     <>
     <div className="about-container" id="about-container">
-        <div className={`about-title ${inView ? 'animate' : ''}`}>
+        <div className="about-title">
           <h2 class="about-h2">
             <span>A</span>
             <span>b</span>
@@ -51,7 +31,7 @@ const About = () => {
                    <div className="aheading">
                     <h3 class="ah3">Feel<span class="diff">Better,</span>Live<span class="diff">Better.</span></h3>
                     <h3 class="ah3">We're Here for You.</h3>
-                    <p className={`descrip ${inView ? 'animate' : ''}`}>Our goal at Tarheel Pharmacy is to deliver friendly, compassionate care while providing the highest quality of pharmaceutical services.
+                    <p className="descrip" >Our goal at Tarheel Pharmacy is to deliver friendly, compassionate care while providing the highest quality of pharmaceutical services.
                         <br />
                         <br />
                          From prescription medications to specialized health solutions, we are dedicated to supporting your well-being. Conveniently located to serve our community, we’re committed to making healthcare accessible and personalized for every patient.</p>
