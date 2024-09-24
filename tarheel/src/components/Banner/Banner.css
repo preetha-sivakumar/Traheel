@@ -1,27 +1,58 @@
 .hero{
     width:100%;
     min-height: 100vh;
-    background:  url('../../assets/hero.png');
+    /* background:  url('../../assets/hero.png'); */
     background-size: cover;
     background-position: center;
-    color: #fff;
+    
     display: flex;
     /* align-items: center;
     justify-content: center; */
     position: relative;
-
+    overflow: hidden;
     margin-left: 0%;
+   
+    /* teal green color matching with trees- #37a9a9  */
+    /* background: linear-gradient(190deg, transparent 50% url, #d0f0c0 50%), url('../../assets/cloud.jpg'); */
+    /* background: 
+    linear-gradient(190deg, #d0f0c0 50%, transparent 50%), 
+    url('../../assets/cloud.jpg'); */
+    background: 
+    linear-gradient(190deg, transparent 50%, #d0f0c0  50%), 
+    url('../../assets/cloud.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
 }
 
+.line-animation{
+  position: absolute;
+  top:20%;
+  right:0%;
+  margin-right: 3%;
+  width:800px;
+  height:500px;
+  border-radius: 20px;
+  padding-left: 30px;
+
+}
 .hero-text{
     text-align: left;
-    margin-left: 20%; 
+    margin-left: 10%; 
     margin-top: 15%;
     max-width: 800px;
+ 
     /* animation: 2s fadeInUp; */
 }
+.hero .text-background{
+  position: absolute;
+  top:10%;
+  margin-left:8%;
+  width:600px;
+  height:600px;
+}
 .hero-text .color{
-  color: rgb(241, 106, 106);
+  color: rgb(106, 182, 106)
 }
 .hero-text .animated-heading span{
   display: inline-block;
@@ -29,6 +60,7 @@
   animation: fadeIn 0.5s forwards;
   font-size: 70px;
   font-weight: 600;
+  
 }
 
 .hero-text .animated-heading span:nth-child(1)
@@ -161,14 +193,14 @@
     font-size: 20px;
     margin: 10px auto 20px;
     line-height: 1.4;
-    animation: 3s fadeInUp;
-    animation-delay: 3s;
+    animation: 2s fadeInUp;
+    animation-delay: 2s;
     opacity: 0;
     animation-fill-mode: forwards;
 }
 
 .btnnav{
-    background: linear-gradient(to right, #5d508d, #376f95);
+    /* background: linear-gradient(to right, #5d508d, #376f95); */
     color: #fff;
     padding: 14px 25px;
     font-size: 16px;
@@ -180,17 +212,37 @@
     align-items: center;
     justify-content: center;
     transition: 0.3s;
-  
+    background-color: rgb(106, 182, 106);
+    color: white;
+    
+    background: linear-gradient(to left, rgb(106, 182, 106) 50%, rgb(67, 115, 67) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+    /* transition: background-position 0.5s ease; /* Smooth transition */
+    background-size: 200% 100%; /* Allow space for the gradient movement */
+    background-position: right; /* Start position 
+    
+    */
+    animation: 2s fadeInUp;
+    animation-delay: 2.5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
   }
   
   .btnnav img {
     width: 22px;
     margin-left: 10px;
-  }
-  .btnnav:hover{
+    transition: transform 0.5s;
     
+  }
+  
+  .btnnav:hover{
+    background-position: left; /* End position on hover */
     color: white;
+   
   }
 
+  .btnnav:hover .arrow{
+    transform: rotate(-45deg);
+  }
 
-  

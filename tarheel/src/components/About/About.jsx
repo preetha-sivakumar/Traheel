@@ -1,30 +1,61 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import {motion, useInView} from 'framer-motion'
 import './About.css'
 import icon from '../../assets/icon.png'
 import exp from '../../assets/exp2.png'
 import pic2 from '../../assets/pic2.png'
 import pills from '../../assets/pills.png'
-const About = () => {
 
+const containerVariants = {
+  hidden:{opacity :0},
+  visible : { opacity: 1, 
+    transition:{ straggerChildren : 0.2, delayChildren : 0.5,},
+  },
+};
+
+const childVariants ={
+  hidden: { opacity: 0, y: '100%' },
+  visible: {
+  opacity: 1,
+  y: '0%',
+  transition: { duration: 1 },
+},
+};
+
+const About = () => {
+  
+  const ref= useRef(null);
+  const isInView = useInView(ref);
+  
+  const text = "ABOUT US";
+ 
+  
+  useEffect(() => {
+    console.log("is in view ->", isInView);
+  }, [isInView]);
   
   return (
     <>
-    <div className="about-container" id="about-container">
-        <div className="about-title">
-          <h2 class="about-h2">
-            <span>A</span>
-            <span>b</span>
-            <span>o</span>
-            <span>u</span>
-            <span>t</span>
-             &nbsp;
-             
-            <span>U</span>
-            <span>s</span>
+    <div className="about-container" id="about-container"  >
+        {/* <motion.div 
+        style={{height:'50vh', background:"black"}}
+        initial={{opacity:0}}
+        whileInView={{opacity:1}}
+        transition={{duration: 2}}
+        ></motion.div>
+        <div ref={ref}
+        style={{height:'50vh', background:isInView ? "blue" : "red", transition: "1s background"}}></div> */}
+        <motion.div  ref= {ref} className="about-title" initial="hidden" animate ="visible" variants={containerVariants}>
+          <motion.h2 class="about-h2">
+          {text.split('').map((char, index) => (
+          <motion.span key={index} variants={childVariants}>
+            {char}
+          </motion.span>
+        ))}
           
             
-          </h2>
-        </div>
+          </motion.h2>
+        </motion.div>
         <div className="acontainer">
             <div className="row-aligns-item-center">
                 <div className="col-lg">

@@ -1,15 +1,17 @@
 import React from 'react'
 import './Banner.css'
-import arrow from '../../assets/dark-arrow.png'
+import arrow from '../../assets/dark-arrow-modified.png'
 import img from '../../assets/img.png'
 import img2 from '../../assets/img-2.png'
-import ani from '../../assets/shipping-line-animation.svg'
+import textpic from '../../assets/text-background.png'
+import ani from '../../assets/shipping-line-animation-no-bg.svg'
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
 const Banner = () => {
   return (
     <div class="hero ">
-       
+        {/* <img src={textpic} alt=""  class="text-background"/> */}
         <div class="hero-text">
+          
           <div className="animated-heading">
             <span>Y</span>
             <span>o</span>
@@ -45,20 +47,13 @@ const Banner = () => {
             <span class="color">Y</span>
             <span class="color">.</span>
           </div>
-            <p>Dedicated to your well-being with expert advice and reliable pharmacy <br/>services. Visit us for all your health needs. </p>
-            <button class="btnnav">Explore More <img src={arrow} alt="" /></button>
-           
-            <object type="image/svg+xml" data={ani} ></object>
-
-
-            
-
-
-
-            
+            <p>Dedicated to your well-being with expert advice and reliable pharmacy <br/>services. Visit us or experience swift delivery for all your health essentials. </p>
+            <button class="btnnav" onclick="#service-container">Explore More <img src={arrow} alt=""  class="arrow"/></button>
+          
 
 
         </div>
+        <object type="image/svg+xml" data={ani}  class="line-animation"></object>
     </div>
   )
 }
