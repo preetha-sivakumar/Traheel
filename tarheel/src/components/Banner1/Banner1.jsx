@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Banner1.css';
-import img from '../../assets/hero-front.png'
+import img from '../../assets/pic-front.png'
 import ani from '../../assets/shipping-line-animation.svg'
 const Banner1 = () => {
   const [scrollPos, setScrollPos] = useState(0);

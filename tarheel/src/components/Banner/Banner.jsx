@@ -1,4 +1,5 @@
 import React from 'react'
+// import {Link} from 'react-router-dom'
 import './Banner.css'
 import arrow from '../../assets/dark-arrow-modified.png'
 import img from '../../assets/img.png'
@@ -48,7 +49,7 @@ const Banner = () => {
             <span class="color">.</span>
           </div>
             <p>Dedicated to your well-being with expert advice and reliable pharmacy <br/>services. Visit us or experience swift delivery for all your health essentials. </p>
-            <button class="btnnav" onclick="#service-container">Explore More <img src={arrow} alt=""  class="arrow"/></button>
+            <button class="btnnav"  > <a href="#service-container" >Explore More </a><img src={arrow} alt=""  class="arrow"/></button>
           
 
 

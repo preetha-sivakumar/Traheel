@@ -1,7 +1,7 @@
 .hero-back {
     width: 100%;
     height: calc(100vh);
-    background: url(../../assets/bg4.webp) no-repeat 50% 50%;
+    background: url(../../assets/d1.jpg) no-repeat 50% 50%;
     background-size: cover;
     position: relative;
     overflow: hidden; /* Ensure the image doesn't overflow */
