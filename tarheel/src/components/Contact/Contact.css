@@ -44,7 +44,7 @@
 .form-main {
   
   min-height: 100vh;
-  width: 1000px;
+  width: 1300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,12 +57,18 @@
     box-shadow: 0 0 10px 10px #ed282820;
     /* backdrop-filter: blur(5px); */
     background-color: white;
-    background: linear-gradient(135deg, white 75%, #5267c5 25%);
+    /* background: linear-gradient(135deg, white 75%, #5267c5 25%); */
     opacity: 1;
     display: flex;
     justify-content: space-between; /* Aligns the form and info side by side */
     gap: 40px; /* Adjust the gap between columns */
     
+    
+}
+.form-main .main-wrapper .form-head{
+  color: rgb(241, 106, 106);
+      align-items: center !important;
+      justify-items: center;
 }
   .main-wrapper  .form-head {
       font-size: 30px;
@@ -74,10 +80,10 @@
       font-weight: 300;
      
       color: rgb(241, 106, 106);
-      align-items: left !important;
-      justify-items: left;
+      align-items: center !important;
+      justify-items: center;
       padding-left: 40px;
-      text-align: left;
+      text-align: center;
       margin-top:0 ;
     }
 
@@ -244,6 +250,10 @@ padding: 16px 0 0;
   
   .contact-details p {
     margin: 10px 0;
+    margin-left: 20px;
+    font-size: 20px;
+          line-height: 30px;
+          font-weight: 400;
   }
   
   .contact-details ul {
@@ -260,3 +270,33 @@ padding: 16px 0 0;
     color: #16235e;
   }
   
+  .meetus .label{
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;          /* Enables flexbox */
+    align-items: left;    /* Vertically centers items */
+    justify-content: left; /* Horizontally centers the content */
+    gap: 20px; 
+    line-height: 30px;
+    padding-bottom: 14px;
+  }
+
+  .meetus .label .iimg{
+    height: 40px;
+    width: 40px;
+    
+  }
+
+  .meetus .label .close{
+    height: 50px;
+    width: 50px;
+    left: 0;
+  }
+
+  .vertical-div{
+    width: 3px;              /* Make it thin for a vertical line */
+    height: 400px;           /* Set the height */
+    background-color: #ccc;  /* Line color */
+    border: none;            /* Remove default border */
+    margin: 70px 20px;
+  }

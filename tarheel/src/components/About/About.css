@@ -201,7 +201,7 @@ left: 0;
 }
 
 
-@keyframes fadeInUp {
+/* @keyframes fadeInUp {
   0% {
     transform: translateY(100%);
     opacity: 0;
@@ -210,7 +210,7 @@ left: 0;
     transform: translateY(0%);
     opacity: 1;
   }
-}
+} */
 
 .features{
   list-style: none;

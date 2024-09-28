@@ -30,8 +30,8 @@
 .site-footer a
 {
   color:aliceblue;
-  font-size: 25px;
-  font-weight: 200;
+  font-size: 20px;
+  font-weight: 300;
 }
 .site-footer a:hover
 {
@@ -46,10 +46,13 @@
 .footer-links li
 {
   display:block
+  
+  
 }
 .footer-links a
 {
   color:#fff
+  
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
@@ -89,6 +92,7 @@
 
 .divider{
     margin-left: 40px;
+    margin-right: 40px;
     
     color: #fff solid 5px;
     

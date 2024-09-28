@@ -13,7 +13,7 @@ const Reviews = () => {
         document.body.appendChild(script);
     })
   return (
-    <div class="reviews">
+    <div class="reviews" id="reviews">
         <div className="elfsight-app-4f69e44d-9838-4918-bd77-261db4682f3d"></div>
     </div>
   )
