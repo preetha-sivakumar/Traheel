@@ -31,6 +31,7 @@ nav{
 .logo{
     width: 250px;
     padding-top: 20px;
+    margin-left: 2px;
    
 }
 nav ul a{
@@ -53,8 +54,11 @@ nav ul li a:hover{
 }
 .dark-nav{
     /* background: #16235e; */
-    background: linear-gradient(to right, #5d508d, #376f95); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: #fff;
+    
+    background: linear-gradient(to right, #5d508d, #376f95);
+    /* background-color: rgb(41, 156, 156); */
+  
+    color: white;
     transition: 0.5s;
 }
 nav .active{
@@ -70,7 +74,7 @@ a{
   
   }
   .containernav{
-    padding-left: 10%;
+    padding-left: 5%;
     padding-right: 10%;
   }
   

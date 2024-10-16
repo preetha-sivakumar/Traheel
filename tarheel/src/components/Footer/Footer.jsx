@@ -47,7 +47,7 @@ const Footer = () => {
          
         </div>
         <br />
-        <hr class="divider"/>
+        <hr class="div"/>
       </div>
      
                
