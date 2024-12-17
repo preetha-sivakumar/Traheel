@@ -9,7 +9,7 @@ scroll-behavior: smooth;
 }
 nav{
     width: 100%;
-    height: 85px;
+    height: 100px;
     /* background: #d66b6b;  */
    
     color: black;
@@ -29,9 +29,11 @@ nav{
 
 }
 .logo{
-    width: 250px;
+    width: 100px;
+    height: 120px;
     padding-top: 20px;
-    margin-left: 2px;
+    padding-bottom: 10px;
+    margin-left: 80px;
    
 }
 nav ul a{
@@ -53,9 +55,16 @@ nav ul li a:hover{
   color: rgb(241, 106, 106);
 }
 .dark-nav{
-    /* background: #16235e; */
+     /* background: #dcceed;  */
+     /* background: #1a3b5d; */
+
+     background: url('../../assets/cloud.jpg');
+     background-image: no-repeat;
+     background-size: cover;
+
+
     
-    background: linear-gradient(to right, #5d508d, #376f95);
+    /* background: linear-gradient(to right, #5d508d, #376f95); */
     /* background-color: rgb(41, 156, 156); */
   
     color: white;

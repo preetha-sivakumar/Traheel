@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import logo from '../../assets/logo1.png'
+import logo1 from '../../assets/Logo-1.png'
 const Navbar = () => {
 
   const [sticky, setSticky] = useState(false);
@@ -14,7 +15,7 @@ const Navbar = () => {
 
   return (
    <nav  class={`containernav ${sticky? 'dark-nav' : ''}`}>
-    <img src={logo} alt=""  class="logo"/>
+    <img src={logo1} alt=""  class="logo"/>
     <ul>
         <li><a href="./">Home</a></li>
         <li><a href="#hero-1">Spotlight</a></li>
