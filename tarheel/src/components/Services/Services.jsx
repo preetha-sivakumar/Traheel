@@ -1,10 +1,10 @@
 import React,{useEffect,useRef} from 'react'
 import './Services.css'
-import serv from '../../assets/tarheel_img.jpg'
+import serv from '../../assets/tarheelimg.jpg'
 
 import dog from '../../assets/dog1.jpg'
 import vac from '../../assets/vaccine-1.png'
-import imm from '../../assets/tarheel_image2.jpg'
+import imm from '../../assets/tarheelimage2.jpg'
 
   const services = [
     {
