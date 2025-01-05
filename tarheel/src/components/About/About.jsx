@@ -3,9 +3,9 @@ import { delay, motion, useInView } from 'framer-motion';
 import './About.css';
 import icon from '../../assets/icon1.png';
 import exp from '../../assets/exp2.png';
-import pic2 from '../../assets/tarheel-img3.jpg'
-import pic3 from '../../assets/tarheel-img5.jpg'
-import pills from '../../assets/tarheel-img.jpg';
+import pic2 from '../../assets/tarheel_img3.jpg'
+import pic3 from '../../assets/tarheel_img5.jpg'
+import pills from '../../assets/tarheel_img.jpg';
 
 const containerVariants = {
   hidden: { opacity: 0 },
