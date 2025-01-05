@@ -24,7 +24,7 @@ const Navbar = () => {
         <li> <a href="#about-container">About Us</a>       </li>
         <li><a href="/services" className="href">Services</a></li>
          
-        <li><a href="../../#contact-container">Contact Us</a></li>
+        <li><a href="../../meet_the_team">Contact Us</a></li>
         <li><a href="../../Immunizations">Immunizations</a></li>
        
         
