@@ -1,84 +1,4 @@
-/***.services-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .heading {
-    font-size: 2.5rem;
-    color: #2c3e50;
-  }
-  
-  .subheading {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    margin-bottom: 3rem;
-  }
-  
-  .services {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 450px;
-    grid-row-gap: 50px ;
-    /* max-width: 1000px; 
-    margin: 0 10px;
-    position: relative;
 
-    z-index: 1; /* Keeps the services grid behind the tooth image 
-   
-  }
-  
-  .service {
-    /* background-color: white; 
-    padding: 2rem;
-    border-radius: 10px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .service:hover {
-    transform: translateY(-10px);
-    background-color: #1abc9c;
-  }
-  
-  .service-icon {
-    font-size: 2.5rem;
-    color: #1abc9c;
-    margin-bottom: 1rem;
-  }
-  
-  .service-title {
-    font-size: 1.5rem;
-    color: #34495e;
-    margin-bottom: 1rem;
-  }
-  
-  .service-description {
-    font-size: 1rem;
-    color: #7f8c8d;
-  }
-  
-  .serv-hero{
-    position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 4rem 0;
-  }
-  .serv-hero .tooth-image {
-    position: absolute;
-  top: 25%; /* Adjust this value to move the image up/down 
-  left: 50%;
-  transform: translateX(-50%); /* Centers the image horizontally 
-  z-index: 2;
-
-  }
-  
-  .tooth {
-    width:400px;
-    height:400px;
-    margin-top: 1rem;
-    border-radius: 15px;
-  } */
 
 .serv-cont{
   scroll-margin-top: 70px;
@@ -115,42 +35,43 @@
     /* padding-left: 40px; */
   }
   
-  .service-left {
+ .service-left {
     order: 1;
   }
   
   .service-right {
     order: 2;
-  }
-  
+  } 
   .servimg {
     width: 100%;
     max-width: 500px; /* Adjust as needed */
-    height: auto;
+    height: 450px;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
   }
   
-  .service.right .service-left {
+   .service.right .service-left {
     order: 2;
   }
+  /*
   .service-left .servimg{
     /* animation: slideInRight 4s ease-in;
     opacity: 0; */
-    opacity: 0; /* Initially hide the image */
-  transform: translateX(-50px); /* Position it off-screen to the right */
+    /* opacity: 0;  Initially hide the image 
+  transform: translateX(-50px); /* Position it off-screen to the right 
   transition: all 3s ease-in-out;
-  }
+  } */
   .service.left .servimg.animate{
     opacity: 1;
   transform: translateX(0);
   }
+  /*
   .service.right .servimg{
-    /* animation: slideInRight 4s ease-in;
-    opacity: 0; */
-    opacity: 0; /* Initially hide the image */
-  transform: translateX(50px); /* Position it off-screen to the right */
+     animation: slideInRight 4s ease-in;
+    opacity: 0; 
+    opacity: 0;  Initially hide the image 
+  transform: translateX(50px); Position it off-screen to the right 
   transition: all 3s ease-in-out ;
   transition-delay: 0.3s;
 
@@ -158,16 +79,16 @@
   .service.right .servimg.animate{
     opacity: 1;
   transform: translateX(0);
-  }
+  }*/
   .service.right .service-right {
     order: 1;
-  }
+  } 
   
   .services-container h3 {
     font-size: 25px;
     font-weight: 600;
     font-weight: 16px;
-    color: rgb(241, 106, 106);
+    color: #2ecc70d7;
     /* color:#436eb3; */
     max-width: 900px;
 
@@ -177,7 +98,7 @@
   .services-container h2 {
     
     font-size: 35px;
-    color:  #5d508d;
+    color:  #001f3f;;
     /* color: #3939be; */
     margin: 10px 0;
     max-width: 600px;
@@ -188,7 +109,7 @@
   .services-container p {
     
     font-weight: 200;
-    color: #5d508d;
+    color: #000;
     margin-bottom: 15px;
     font-size: 30px;
 
@@ -197,7 +118,7 @@
       
       
 
-
+/* 
 @keyframes slideInLeft {
     from {
       transform: translateX(-100%);
@@ -226,11 +147,11 @@
   .service-right img {
     animation: slideInRight 2s ease-in;
   }
-  
+   */
   .stitle .seh2{
     font-size: 100px;
     font-weight: 300;
-    color: #5d508d;
+    color: #001f3f;
     align-items: center;
     justify-items: center;
     padding-left: 20px;
@@ -241,7 +162,7 @@
  .stitle .seh3{
    font-size: 30px;
    font-weight: 300;
-   color: rgb(241, 106, 106);
+   color: #2ecc70d7;
    align-items: center;
    justify-items: center;
    padding-left: 20px;

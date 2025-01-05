@@ -94,10 +94,10 @@
         align-items: center;
         justify-content: center;
         transition: 0.3s;
-        background-color: #FCAF3C;
+        background-color: #50b875;
         color: white;
         padding-top: 10px;
-        background: linear-gradient(to left, #FCAF3C 50%, #fff 50%) right;
+        background: linear-gradient(to left, #50b875 50%, #fff 50%) right;
         background-size: 200%;
         transition: .5s ease-out;
 
@@ -189,7 +189,7 @@
 }
 
 .time span{
-    color:#FCAF3C;
+    color:#50b875;
 }
 
 .aimg{
@@ -215,7 +215,7 @@
   
   /* #aac7da */
   .vaccine-card {
-    background-color: #F0E6F6;
+    background-color:  rgb(98, 184, 122);
 
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -232,7 +232,7 @@
   
   .vaccine-card h2 {
     margin-bottom: 15px;
-    color: #5d508d;
+    color: #fff;
   }
   
   .vaccine-card p {

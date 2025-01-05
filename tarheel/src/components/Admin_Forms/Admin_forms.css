@@ -1,0 +1,152 @@
+.banner-img{
+    background-image: url('../../assets/admin-login.png');
+    /* background: linear-gradient(to right, #001f3f , #31a762 ); */
+    background-repeat: no-repeat;
+    
+    background-size:  cover;
+    opacity: 80%;
+    height: 400px;
+ 
+    display: flex;
+   justify-content: center;  /* Horizontally center */
+   align-items: center;      /* Vertically center */
+  
+ 
+ }
+ 
+ 
+ 
+ 
+ .i-title{
+   
+     /* align-content: center;
+     text-align: center; */
+    
+     font-size: 3rem;
+    text-align: center;
+ }
+ 
+
+ /* General Admin Panel Styles */
+.admin-panels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+  }
+  
+  .panel {
+    background-color: #a7c7e7;
+    border: 1px solid #0c0c0c;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .panel h3{
+    font-size: 30px;
+  }
+  .panel p{
+    padding-bottom: 20px;
+    margin-top: 20px ;
+    font-size: 21px;
+    text-align: center;
+  }
+  
+  .panel:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Box */
+  .modal {
+    background: #fff;
+    border-radius: 8px;
+    width: 600px;
+    
+    max-width: 90%;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+  }
+  
+  .modal-content {
+    margin-top: 15px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .close-btn:hover {
+    color: #000;
+  }
+  
+  /* Modal Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  form input,
+  form textarea,
+  form button {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  form button {
+    background-color: #6e9ec3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #557a99;
+  }
+.holiday-item{
+    font-size: 20px;
+}
+  .holiday-item .delete-btn{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #557a99;
+    color: #fff;
+    align-self: center;
+  }
+  

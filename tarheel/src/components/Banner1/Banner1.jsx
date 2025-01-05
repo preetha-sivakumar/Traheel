@@ -1,68 +1,190 @@
-import React, { useEffect, useState } from 'react';
-import './Banner1.css';
-import img from '../../assets/pic-front.png'
-import ani from '../../assets/shipping-line-animation.svg'
+import React, { useState, useEffect } from 'react'
+import './Banner1.css'
+import heroguy from '../../assets/hero-guy1.png'
+import plus1 from '../../assets/plus.png'
 const Banner1 = () => {
-  const [scrollPos, setScrollPos] = useState(0);
 
+  const [holidayHours, setHolidayHours] = useState([]);
+  const [spotlightContent, setSpotlightContent] = useState([]);
+  
+  // Fetch holiday hours from localStorage on mount
   useEffect(() => {
-    const handleScroll = () => {
-        setScrollPos(window.scrollY);
-    };
+    const storedHolidays = JSON.parse(localStorage.getItem('holidayHours')) || [];
+    setHolidayHours(storedHolidays);
 
-    window.addEventListener('scroll', handleScroll);
+    const storedSpotlight = JSON.parse(localStorage.getItem('spotlightContent')) || [];
+    setSpotlightContent(storedSpotlight);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
   }, []);
 
-  // Define the maximum zoom factor
-  const maxZoomFactor = 1.5; // 50% zoom
-  // Define the scroll distance after which zoom stops increasing
-  const zoomLimit = 500; // Adjust this value as needed
-
-  // Calculate zoom scale
-  const zoomScale = Math.min(1 + scrollPos / zoomLimit, maxZoomFactor);
-
   return (
-    <div>
-      <div className="hero-back">
-        {/* Apply the zoom effect to the image */}
-        <img
-          src={img}
-          alt=""
-          style={{
-            transform: `scale(${zoomScale})`, // Zoom effect on scroll
-            transformOrigin: 'center top',
-            transition: 'transform 0.2s ease-out', // Smooth transition for the zoom
-            width: '100%', // Keep the width responsive
-            height: 'auto', // Adjust height automatically
-          }}
-        />
-         
-      </div>
+    <div className ='hero-section'>
+      <div className="special-hrs">
+       
+        <div className="content">
+          <div className="content-hrs">
 
-      <div className="content">
-        <h1>Content goes here</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
-          cupiditate fuga natus voluptatem dolorum ab illo, quos adipisci
-          voluptatum explicabo cumque sint neque quo sit consequatur molestiae
-          expedita saepe harum, nobis labore, praesentium. Dicta nobis
-          consectetur, culpa consequatur. Nisi velit aspernatur veritatis, vero
-          iste culpa voluptates eos provident officiis placeat quis voluptas
-          magnam animi neque rem nam sint tempore, amet aut libero? Dignissimos
-          quisquam autem eos. Fuga, incidunt temporibus id sit. Iusto labore
-          animi a deleniti magni sequi incidunt at maiores harum sed quo
-          accusantium aperiam, officiis architecto ducimus consequuntur
-          distinctio doloremque numquam esse consectetur velit beatae. Sequi
-          perspiciatis, inventore.
-        </p>
-        {/* Rest of the content */}
-      </div>
-    </div>
-  );
-};
+          
+            <h3>Holiday Hours:</h3>
+            <br />
+            <div className="holiday-grid">
+            {holidayHours.length > 0 ? (
+          holidayHours.map((holiday, index) => (
+            <div className="holiday-item" key={index}>
+            <strong>{holiday.day}:</strong> {holiday.description}
+          </div>
+          ))
+        ) : (
+          <p>No holiday hours set.</p>
+        )}
+        </div>
+        </div>
+       
+      <div className="news">
+     
+         <h3>Announcements:</h3>
+            <br />
+            <div className="holiday-grid1">
+            {spotlightContent.length > 0 ? (
+              spotlightContent.map((Spotlight, index) => (
+                <div className="holiday-item1" key={index}>
+                  <strong>{Spotlight.title}:</strong> {Spotlight.desc}
+                </div>
+              ))
+            ) : (
+              <p>No announcements yet.</p>
+            )}
 
-export default Banner1;
+{/* <h3>Holiday Hours:</h3>
+            <br />
+            <div className="holiday-grid">
+            {holidayHours.length > 0 ? (
+          holidayHours.map((holiday, index) => (
+            <div className="holiday-item" key={index}>
+            <strong>{holiday.day}:</strong> {holiday.description}
+          </div>
+          ))
+        ) : (
+          <p>No holiday hours set.</p>
+        )} */}
+          </div>
+        </div>
+        </div>
+      </div> 
+
+      
+      <div className="hero1">
+      
+     
+       <div class="hero-text">
+        <div className="hero-title">
+
+      
+         <h1>
+          <span className="background">Your Effortless, </span>
+          <br         /><span className='background'>And Inclusive<br /> </span>
+          <span className ='background'>Pharmacy</span></h1>
+         </div>
+          <div className ="Hero_textBlock">
+          <p><span className='background'>Visit us or experience swift delivery <br />for all your health essentials.<br />The Pharmacy Experience You Deserve.</span></p>
+          <span className='background'> <button className='btn-b'>Get Started!</button> </span>
+          </div>
+       </div>
+        <div class="hero-image">
+          <img src={heroguy} alt="Smiling person " />
+        
+          </div>
+          
+          <p className="tagline">
+          Proudly serving the TarHeel Towns since 2017 
+    </p>
+         </div>
+        
+        
+         {/* <section>
+         <svg class=" BorderShape_shape__X_e1g BorderShape_rotate___SSSS" style="background-color:transparent" width="1366" height="153" preserveAspectRatio="none" viewBox="0 0 1366 153" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H1366C967 67 505.041 152.5 255.5 152.5C58.5 152.5 0 68 0 0Z" fill="#00263E"></path></svg>
+
+         </section> */}
+        {/* <div>
+  <svg
+    className="BorderShape_shape__X_e1g BorderShape_rotate___SSSS"
+    style={{
+      backgroundColor: 'transparent',
+      width: '1366px',
+      height: '153px',
+    }}
+    preserveAspectRatio="none"
+    viewBox="0 0 1366 153"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 0H1366C967 67 505.041 152.5 255.5 152.5C58.5 152.5 0 68 0 0Z"
+      fill="#00263E"
+    ></path>
+  </svg>
+</div> */}
+
+
+{/* <svg
+  className="border-shape BorderShape_shape__X_e1g"
+  style={{ backgroundColor: 'transparent' }}
+  width="1366"
+  height="153"
+  preserveAspectRatio="none"
+  viewBox="0 0 1366 153"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+
+  <path
+    d="M0 0H1366C967 67 505.041 152.5 255.5 152.5C58.5 152.5 0 68 0 0Z"
+    fill="#001f3f"
+  ></path>
+  
+</svg> */}
+
+<div style={{ position: "relative", width: "100%", height: "auto" }}>
+  {/* Image */}
+  <img
+    src={plus1}
+    alt="Overlapping Image"
+    style={{
+      position: "absolute",
+      top: "-10px", // Adjust the positioning as needed
+      left: "50px",
+      zIndex: 2, // Ensure it appears above the SVG
+      width: "170px", // Adjust size as needed
+    }}
+  />
+
+  {/* SVG */}
+  <svg
+    className="border-shape BorderShape_shape__X_e1g"
+    style={{
+      position: "relative",
+      backgroundColor: "transparent",
+      zIndex: 1, // Ensure it appears below the image
+    }}
+    width="1366"
+    height="153"
+    preserveAspectRatio="none"
+    viewBox="0 0 1366 153"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 0H1366C967 67 505.041 152.5 255.5 152.5C58.5 152.5 0 68 0 0Z"
+      fill="#001f3f"
+    ></path>
+  </svg>
+</div>
+
+
+</div>
+        
+        
+    
+  )
+}
+
+export default Banner1

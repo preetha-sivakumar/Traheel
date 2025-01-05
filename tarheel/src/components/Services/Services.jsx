@@ -1,41 +1,9 @@
 import React,{useEffect,useRef} from 'react'
 import './Services.css'
-import serv from '../../assets/servs.jpg'
-import dog from '../../assets/dog.png'
-import vac from '../../assets/vaccine.png'
-import imm from '../../assets/pic3.png'
-const services1 = [
-    {
-      title: "Experienced Doctor",
-      description: "The goal of our clinic is to provide friendly, caring dentistry.",
-      icon: "🩺",
-    },
-    {
-      title: "Personalized Care",
-      description: "The goal of our clinic is to provide friendly, caring dentistry.",
-      icon: "🦷",
-    },
-    {
-      title: "Flexible Payment Options",
-      description: "The goal of our clinic is to provide friendly, caring dentistry.",
-      icon: "💵",
-    },
-    {
-      title: "Emergency Services",
-      description: "The goal of our clinic is to provide friendly, caring dentistry.",
-      icon: "⛑️",
-    },
-    {
-      title: "Positive Patient Reviews",
-      description: "The goal of our clinic is to provide friendly, caring dentistry.",
-      icon: "⭐",
-    },
-    {
-      title: "Latest Technology",
-      description: "The goal of our clinic is to provide friendly, caring dentistry.",
-      icon: "⚙️",
-    },
-  ];
+import serv from '../../assets/tarheel-img.jpg'
+import dog from '../../assets/dog1.jpg'
+import vac from '../../assets/vaccine-1.png'
+import imm from '../../assets/tarheel-img2.jpg'
 
   const services = [
     {

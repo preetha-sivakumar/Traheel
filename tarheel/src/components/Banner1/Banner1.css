@@ -1,38 +1,266 @@
-.hero-back {
-    width: 100%;
-    height: calc(100vh);
-    background: url(../../assets/d1.jpg) no-repeat 50% 50%;
-    background-size: cover;
-    position: relative;
-    overflow: hidden; /* Ensure the image doesn't overflow */
-}
-.content {
-    width: 100%;
+.hero-section{
     height: auto;
-    margin: auto;
-    max-width: 1200px;
-    padding: 40px 0 40px 0;
 }
 
-h1 {
-    font-family: Poppins;
-    color: #fff;
-}
-
-p {
-    font-family: Poppins;
-    line-height: 30px;
-    color: #fff;
-    font-weight: lighter;
-}
-
-.hero-back img {
+.hero-section .special-hrs{
+    height: 400px;
     width: 100%;
+   
+  
+    background-color: #001f3f;
+    text-align: center;
+    
+
+    display: flex; /* To enable flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    
+    
+    position: relative;
+    z-index: 1;
+    padding-bottom: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.hero-section .special-hrs .content{
+  display: flex; /* To enable flexbox */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  flex-direction: row;
+  justify-content: space-between; /* Add space between the two sections */
+  align-items: flex-start; 
+  
+}
+.hero-section .special-hrs .news{
+  flex: 1;
+  margin: 0 10px; /* Add spacing between sections */
+  padding: 20px;
+  border-radius: 15px; 
+  background-color: #eeeeee;
+  
+}
+.hero-section .special-hrs .content-hrs{
+    padding-top: 30px;
+    padding-left: 15%;
+    padding-right: 10px;
+    background-color: #eeeeee;
+    /* width: 50%; */
+    height: auto;
+    text-align: center;
+    border-radius: 25px; /* Creates a curved box */
+    flex: 1;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center;
+    justify-content: center; */
+    padding: 20px;
+    padding-left: 2%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+   
+}
+
+.hero-section .special-hrs .content p {
+    margin: 10px 0; /* Adds spacing between each paragraph */
+    font-size: 15px;
+    font-style: bold;
+    padding-left: 5%;
+}
+
+.hero-section .special-hrs .content h3{
+  margin: 0px 0; /* Adds spacing between each paragraph */
+  font-style: underline;
+  font-style: bold;
+}
+
+.holiday-list {
+  display: flex;
+  flex-direction: column; /* Arrange holidays in a vertical column */
+  gap: 10px; /* Space between items */
+}
+
+.holiday-item {
+  flex: 1 1 calc(33.33% - 10px); /* Ensures 3 items per row */
+  max-width: calc(33.33% - 10px); 
+  
+  align-items: center;
+  font-size: 1rem;
+  color: #333; /* Adjust text color */
+  padding: 20px;
+}
+.holiday-item1 {
+  flex: 1 1 calc(50% - 10px); /* Ensures 3 items per row */
+  max-width: calc(50% - 10px); 
+  
+  align-items: center;
+  font-size: 1rem;
+  color: #333; /* Adjust text color */
+  padding: 20px;
+}
+.holiday-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap into new rows/columns */
+  gap: 10px; /* Space between items */
+}
+.holiday-grid1 {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap into new rows/columns */
+  gap: 10px; /* Space between items */
+}
+.holiday-item strong {
+  margin-right: 8px;
+  color: #000; /* Make the day bold and prominent */
+  display: block;
+}
+
+.hero1 {
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    height: 100vh; /* Full screen height */
+    padding: 1% 5%; /* Add some padding */
+    background-color: #001f3f; /* Navy background color */
+    /* Prevent elements from overflowing */
+    overflow: visible;
+    
+   
+  }
+  
+  .hero-text {
+    z-index: 2; /* Ensure text is on top */
+    color: white;
+    max-width: 150%; /* Adjust based on design */
+
+    /* flex:1 ;space for text */
+    margin-left:10%;
+    margin-top: 0%;
+
+    margin-bottom: 1em;
+    display: flex;
+    /* justify-content: flex-end; */
+    flex-direction: column;
+  }
+
+  .hero-text .hero-title{
+   line-height:150%;
+  }
+  .hero-text .background{
+    background-color: #001f3f;
+    padding: .15em .65em .15em .45em;
+    border-radius: .8em;
+  }
+  .hero-text .Hero_textblock{
+    background-color: #001f3f;
+    padding: 1.5rem;
+   border-radius: 3rem;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.8;
+  }
+  
+  .hero-text p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .hero-text .btn-b {
+    margin-top: 25px;
+    padding: 15px 30px;
+     background-color: #2ecc71; /*Green button */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    
+  }
+
+
+  
+  .hero-image {
+    position: absolute;
+    right: 0%;
+    width:50%;
+    bottom: 31%;
+    left:50%;
+    z-index: 2; /* Push image behind text */
+    flex: 1;
+    overflow: visible;
+    
+  }
+  
+  .hero-image img {
+    max-height: 40%;
+    /* object-fit: cover;
+    height: 400px; */
+    width: 80%;
+  }
+  
+ 
+  /* Shape overlapping effect */
+  .hero1::before {
+    content: "";
     position: absolute;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    overflow: hidden; /* Ensure the image doesn't overflow */
-}
+    left: 20%;
+    width: 70%;
+    height: 70%;
+    background-color: #2ecc71; /* Green background */
+    /* clip-path: circle(50% at 50% 50%); Rounded shape */
+    align-items: center;
+    border-radius: 250px;
+    z-index: 0; /* Push behind other elements */
+  }
+  
+  .hero1::after {
+    content: "";
+    /* background-image: url(data:image/svg+xml;utf8,<svg width="618" height="156" viewBox="0 0 618 156" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M417.344 87.9574C407.758 87.9574 384.453 87.9574 354.867 87.9574C286.769 87.9574 185.284 87.9574 138.839 87.9574H113.716C69.9155 87.9574 21.9829 109.366 0 156H354.867H429.741C504.449 156 561.473 114.677 597.835 45.3064C611.223 19.7489 618 0 618 0C554.035 82.4808 465.607 88.1234 417.179 88.1234L417.344 87.9574Z" fill="%23FFA1D5"/></svg>); */
+    background-image: url('../../assets/hero-back.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 38.625rem;
+    max-width: 75vw;
+    max-height: 18vw;
+    height: 9.75rem;
+    position: absolute;
+    bottom: 25%;
+    right: 15%;
+    z-index: 2;
+  }
+  
+  .Hero_textBlock{
+    background-color: #001f3f;
+    padding: 1.5rem;
+    border-radius: .8em;
+    width: 120%;
+  }
+
+  .BorderShape_shape__X_e1g.BorderShape_rotate___SSSS{
+    transform:rotate(180deg);
+  }
+
+  .BorderShape_shape__X_e1g{
+     width: 100%;
+     height: min(10vw, 9.5rem);
+     display: block;
+     margin: -1px 0;
+     background-color:#001f3f;
+  }
+
+  .tagline {
+    margin-top: 20px; /* Add space between the image and the tagline */
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff; /* Make sure it matches your theme */
+    position: relative; /* Ensure it stays within the layout flow */
+    z-index: 2; /* Ensure it is not behind any overlapping elements */
+    bottom: -90%;
+    left: -25%;
+   
+  }

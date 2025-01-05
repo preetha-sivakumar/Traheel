@@ -4,14 +4,14 @@ import { motion, useInView } from 'framer-motion';
 import './Announcement.scss'
 import dev from '../../assets/delivery.png'
 import vac from '../../assets/vaccine.png'
-
+import design from '../../assets/design2.png'
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: { 
     opacity: 1, 
     transition: { 
       staggerChildren: 0.2,  
-      delayChildren: 3
+      delayChildren: 0.3
     },
   },
 };
@@ -38,7 +38,7 @@ const Announcement = () => {
 
   return (
     <div class="hero-1" id="hero-1">
-  <div class="diagonal-hero-bg">
+  {/* <div class="diagonal-hero-bg">
      <div class="stars">
         <div class="small"></div>
         <div class="medium"></div>
@@ -51,13 +51,14 @@ const Announcement = () => {
         <div class="medium"></div>
         <div class="big"></div>
       </div>
-   </div>
+   </div> */}
    <motion.div className="title" 
          ref={spotlightref}
          
           initial="hidden"
           animate={isspotlightView  ? 'visible' : 'hidden'}
           variants={containerVariants}>
+            <img src={design} alt="" className='design' />
     <motion.h2 class="sh2">
             {/* <span>S</span>
             <span>p</span>
@@ -73,6 +74,7 @@ const Announcement = () => {
                 {char}
               </motion.span>
             ))}
+            
     </motion.h2>
     <motion.h3 class="sh3" variants= {childVariants}>What's new?</motion.h3>
    </motion.div>

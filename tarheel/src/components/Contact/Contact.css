@@ -7,10 +7,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #00000024, #00000024),
+    /* background: linear-gradient(to bottom, #00000024, #00000024),
     url("../../assets/pills.png")
       no-repeat center;
-  background-size: cover;
+  background-size: cover; */
+
+  background: #001f3f;
   min-height: 100vh;
   display: flex;
   scroll-margin-top: 70px;
@@ -20,7 +22,7 @@
     font-size: 60px;
     font-weight: 300;
    
-    color: rgb(241, 106, 106);
+    color: #2ecc71;
     align-items: left !important;
     justify-items: left;
     padding-left: 40px;
@@ -66,7 +68,7 @@
     
 }
 .form-main .main-wrapper .form-head{
-  color: rgb(241, 106, 106);
+  color: #2ecc71;
       align-items: center !important;
       justify-items: center;
 }
@@ -79,7 +81,7 @@
       font-size: 60px;
       font-weight: 300;
      
-      color: rgb(241, 106, 106);
+      color: #2ecc71;
       align-items: center !important;
       justify-items: center;
       padding-left: 40px;
@@ -213,6 +215,7 @@
   justify-content: center;
   align-items: center;
 padding: 16px 0 0;
+
   }
 .btn-wrap button {
   padding: 0 32px;
@@ -222,11 +225,14 @@ padding: 16px 0 0;
   font-weight: 600;
   border-radius: 10px;
   transition: all 0.5s ease;
-  cursor: pointer; box-shadow: 0 0 5px 5px #00000020;
+  cursor: pointer;
+   box-shadow: 0 0 5px 5px #00000020;
+  background-color: #2ecc71;
 }
 .btn-wrap button:hover {
   border: 1px solid #000;
-  background: transparent;
+  color: #000;
+  background-color: #2ecc71;
   
 }
 
