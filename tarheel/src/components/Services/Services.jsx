@@ -1,6 +1,6 @@
 import React,{useEffect,useRef} from 'react'
 import './Services.css'
-import serv from '../../assets/tarheel-img.jpg'
+import serv from '../../assets/tarheel_img.jpg'
 
 import dog from '../../assets/dog1.jpg'
 import vac from '../../assets/vaccine-1.png'
