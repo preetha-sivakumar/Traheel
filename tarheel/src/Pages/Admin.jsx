@@ -81,7 +81,7 @@ const Admin = () => {
   useEffect(() => {
     const credentials = JSON.parse(localStorage.getItem('credentials')) || {
       username: 'admin',
-      password: 'hi',
+      password: 'admin',
     };
     setStoredCredentials(credentials);
   }, []);
