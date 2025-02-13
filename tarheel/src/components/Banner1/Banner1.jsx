@@ -3,6 +3,7 @@ import React, { useState, useEffect} from 'react'
 import './Banner1.css'
 import heroguy from '../../assets/hero-guy1.png'
 import plus1 from '../../assets/plus.png'
+import plus2 from '../../assets/plus2.png'
 const Banner1 = () => {
 
   
@@ -23,7 +24,7 @@ const Banner1 = () => {
   return (
     <div className ='hero-section'>
        <p className="tagline-top">
-          Proudly serving the TarHeel Towns since 2017
+       Local. Independent. LGBTQ+ Inclusive.<br /> Proudly serving the TarHeel Towns since 2017
     </p>
       <div className="special-hrs">
        
@@ -104,7 +105,8 @@ const Banner1 = () => {
           </div>
           
           <p className="tagline">
-          Proudly serving the TarHeel Towns since 2017 
+          {/* A Pharmacy That Cares for <br />Every Identity, Every Family, Every Story */}
+          Serving with Pride, Compassion, and Inclusivity
     </p>
          </div>
         
@@ -154,14 +156,14 @@ const Banner1 = () => {
 <div style={{ position: "relative", width: "100%", height: "auto" }}>
   {/* Image */}
   <img
-    src={plus1}
+    src={plus2}
     alt="Overlapping Image"
     style={{
       position: "absolute",
-      top: "-10px", // Adjust the positioning as needed
+      top: "-15px", // Adjust the positioning as needed
       left: "50px",
       zIndex: 2, // Ensure it appears above the SVG
-      width: "170px", // Adjust size as needed
+      width: "160px", // Adjust size as needed
     }}
   />
 

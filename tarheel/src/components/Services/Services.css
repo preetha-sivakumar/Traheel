@@ -170,3 +170,25 @@
    
  }
  
+ .stitle .pride-text{
+  
+    background: linear-gradient(
+    to right, 
+    #ff0000 20%,  /* Red */
+        #ff8c00 25%,  /* Orange */
+        #ffff00 40%,  /* Yellow */
+        #008000 55%,  /* Green */
+        #0000ff 75%,  /* Blue */
+        #8b00ff 90%   /* Purple */
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 30px;
+   font-weight: 300;
+   align-items: center;
+   justify-items: center;
+   padding-left: 20px;
+   text-align: center;
+  
+ }

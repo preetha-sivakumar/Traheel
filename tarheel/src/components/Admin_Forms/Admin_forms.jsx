@@ -11,8 +11,8 @@ const AdminPortal = () => {
     password: '',
   });
 
-  const [holidayHours, setHolidayHours] = useState([]);
-  const [newHoliday, setNewHoliday] = useState({ day: '', description: '' });
+  // const [holidayHours, setHolidayHours] = useState([]);
+  // const [newHoliday, setNewHoliday] = useState({ day: '', description: '' });
 
 
 
@@ -34,7 +34,7 @@ const AdminPortal = () => {
     };
 
     // Load stored holiday hours or use an empty array
-    const holidays = JSON.parse(localStorage.getItem('holidayHours')) || [];
+    // const holidays = JSON.parse(localStorage.getItem('holidayHours')) || [];
    
      // Load stored news or use an empty array
     //  const news = JSON.parse(localStorage.getItem('newsItems')) || [];
@@ -43,7 +43,7 @@ const AdminPortal = () => {
     setStoredCredentials(credentials);
     setNewUsername(credentials.username);
     setNewPassword(credentials.password);
-    setHolidayHours(holidays);
+    // setHolidayHours(holidays);
     setSpotlightContent(Spotlight);
 
   
@@ -58,18 +58,18 @@ const AdminPortal = () => {
   };
  
   // Add new holiday
-  const addHoliday = () => {
-    if (!newHoliday.day || !newHoliday.description) {
-      alert('Please fill out all fields.');
-      return;
-    }
-    const updatedHolidays = [...holidayHours, { ...newHoliday}];
-    setHolidayHours(updatedHolidays);
-    localStorage.setItem('holidayHours', JSON.stringify(updatedHolidays));
-    setNewHoliday({ day: '', description: '' });
-    alert('Holiday added successfully!');
-    closeModal();
-  };
+  // const addHoliday = () => {
+  //   if (!newHoliday.day || !newHoliday.description) {
+  //     alert('Please fill out all fields.');
+  //     return;
+  //   }
+  //   const updatedHolidays = [...holidayHours, { ...newHoliday}];
+  //   setHolidayHours(updatedHolidays);
+  //   localStorage.setItem('holidayHours', JSON.stringify(updatedHolidays));
+  //   setNewHoliday({ day: '', description: '' });
+  //   alert('Holiday added successfully!');
+  //   closeModal();
+  // };
 
   const handleNewsUpdate = () => {
     if (!newSpotlight.title|| !newSpotlight.desc) {
@@ -84,12 +84,12 @@ const AdminPortal = () => {
       closeModal();
   };
 
-  const deleteHoliday = (index) => {
-    const updatedHolidays = holidayHours.filter((_, i) => i !== index);
-    setHolidayHours(updatedHolidays);
-    localStorage.setItem('holidayHours', JSON.stringify(updatedHolidays));
-    alert('Holiday deleted successfully!');
-  };
+  // const deleteHoliday = (index) => {
+  //   const updatedHolidays = holidayHours.filter((_, i) => i !== index);
+  //   setHolidayHours(updatedHolidays);
+  //   localStorage.setItem('holidayHours', JSON.stringify(updatedHolidays));
+  //   alert('Holiday deleted successfully!');
+  // };
 
   const deleteSpotlight = (index) => {
     const updatedSpotlight = spotlightContent.filter((_, i) => i !== index);
@@ -113,33 +113,37 @@ const AdminPortal = () => {
           <p>Update your admin profile details such as username and password.</p>
         </div>
 
-        <div className="panel" onClick={() => setActiveModal('holidayHours')}>
+        {/* <div className="panel" onClick={() => setActiveModal('holidayHours')}>
           <h3>Holiday Hours</h3>
           <p>Set or modify holiday hours for the organization.</p>
-        </div>
+        </div> */}
 
         <div className="panel" onClick={() => setActiveModal('spotlight')}>
           <h3>Announcements</h3>
           <p>Highlight special announcements or features for the users.</p>
         </div>
-      </div>
-
-       {/* Panel Section */}
-       <div className="admin-panels">
-        <div className="panel" onClick={() => setActiveModal('viewhours')}>
-          <h3>View Holiday Hours</h3>
-          <p> View Posted Special Hours and delete them if needed</p>
-        </div>
-
         <div className="panel" onClick={() => setActiveModal('viewnews')}>
           <h3>View Active Announcements</h3>
           <p>Review the latest announcements and remove outdated ones.</p>
         </div>
+      </div>
+
+       {/* Panel Section */}
+       <div className="admin-panels">
+        {/* <div className="panel" onClick={() => setActiveModal('viewhours')}>
+          <h3>View Holiday Hours</h3>
+          <p> View Posted Special Hours and delete them if needed</p>
+        </div> */}
+
+        {/* <div className="panel" onClick={() => setActiveModal('viewnews')}>
+          <h3>View Active Announcements</h3>
+          <p>Review the latest announcements and remove outdated ones.</p>
+        </div> */}
 
         
       </div>
 
-    {activeModal === 'viewhours' && (
+    {/* {activeModal === 'viewhours' && (
         <Modal title ="Holiday Hours Listed" onClose={closeModal}>
             <div className="content-hrs">
 
@@ -163,7 +167,7 @@ const AdminPortal = () => {
                  </div>
              </div>
         </Modal>
-    )}
+    )} */}
 
    {activeModal === 'viewnews' && (
     <Modal title="View Latest News Listed" onClose={closeModal} >
@@ -220,7 +224,7 @@ const AdminPortal = () => {
 
 
       {/* Modals for Holiday Hours */}
-      {activeModal === 'holidayHours' && (
+      {/* {activeModal === 'holidayHours' && (
         <Modal
          title="Holiday Hours"
           onClose={closeModal}
@@ -255,7 +259,7 @@ const AdminPortal = () => {
           <button type="submit">Save</button>
         </form>
       </Modal>
-      )}
+      )} */}
 
       {/* Modals for Spotlight */}
       {activeModal === 'spotlight' && (

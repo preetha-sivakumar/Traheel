@@ -67,6 +67,7 @@ export const Services = () => {
         <div className="stitle">
     <h2 class="seh2">Our Services</h2>
     <h3 class="seh3">We are committed to friendly and accessible service.</h3>
+    <h3 class="pride-text">Caring for Every Identity, Every Family, Every Story</h3>
    </div>
 
    
