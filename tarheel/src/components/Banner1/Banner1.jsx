@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect} from 'react'
+
 import './Banner1.css'
 import heroguy from '../../assets/hero-guy1.png'
 import plus1 from '../../assets/plus.png'
 const Banner1 = () => {
+
+  
 
   const [holidayHours, setHolidayHours] = useState([]);
   const [spotlightContent, setSpotlightContent] = useState([]);
@@ -19,10 +22,13 @@ const Banner1 = () => {
 
   return (
     <div className ='hero-section'>
+       <p className="tagline-top">
+          Proudly serving the TarHeel Towns since 2017
+    </p>
       <div className="special-hrs">
        
         <div className="content">
-          <div className="content-hrs">
+          {/* <div className="content-hrs">
 
           
             <h3>Holiday Hours:</h3>
@@ -38,11 +44,11 @@ const Banner1 = () => {
           <p>No holiday hours set.</p>
         )}
         </div>
-        </div>
+        </div> */}
        
       <div className="news">
      
-         <h3>Announcements:</h3>
+         <h3 className='newsh3'>Announcements:</h3>
             <br />
             <div className="holiday-grid1">
             {spotlightContent.length > 0 ? (
@@ -71,13 +77,15 @@ const Banner1 = () => {
         </div>
         </div>
       </div> 
-
+     
       
       <div className="hero1">
       
      
        <div class="hero-text">
+       
         <div className="hero-title">
+       
 
       
          <h1>
@@ -87,7 +95,7 @@ const Banner1 = () => {
          </div>
           <div className ="Hero_textBlock">
           <p><span className='background'>Visit us or experience swift delivery <br />for all your health essentials.<br />The Pharmacy Experience You Deserve.</span></p>
-          <span className='background'> <button className='btn-b'>Get Started!</button> </span>
+          <span className='background'> <button to="/services" className='btn-b' >Get Started!</button> </span>
           </div>
        </div>
         <div class="hero-image">

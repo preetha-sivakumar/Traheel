@@ -1,5 +1,6 @@
 .hero-section{
     height: auto;
+    padding-top: 100px;
 }
 
 .hero-section .special-hrs{
@@ -38,7 +39,12 @@
   padding: 20px;
   border-radius: 15px; 
   background-color: #eeeeee;
+  font-size: 15px;
   
+}
+
+.hero-section .special-hrs .news .newsh3{
+  font-size: 2rem;
 }
 .hero-section .special-hrs .content-hrs{
     padding-top: 30px;
@@ -84,7 +90,7 @@
   max-width: calc(33.33% - 10px); 
   
   align-items: center;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #333; /* Adjust text color */
   padding: 20px;
 }
@@ -93,7 +99,7 @@
   max-width: calc(50% - 10px); 
   
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #333; /* Adjust text color */
   padding: 20px;
 }
@@ -263,4 +269,14 @@
     bottom: -90%;
     left: -25%;
    
+  }
+
+  .tagline-top{
+    background-color:#001f3f;
+    color:white;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    
   }

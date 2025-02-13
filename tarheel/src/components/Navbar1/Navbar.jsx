@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../Navbar/Navbar.css'
+import './Navbar1.css'
 import logo from '../../assets/logo1.png'
 import logo1 from '../../assets/Logo-1.png'
 const Navbar = () => {
@@ -16,16 +16,17 @@ const Navbar = () => {
    }
 
   return (
-   <nav  class={`containernav ${sticky? 'dark-nav' : ''}`}>
+   <nav  className={`containernav1 ${sticky? 'dark-nav' : ''}`}>
     <img src={logo1} alt=""  class="logo"/>
     <ul className={mobilemenu?'' : 'hide-mobile-menu'}>
         <li><a href="./">Home</a></li>
+        <li><a href="../../Immunizations">Immunizations</a></li>
         <li><a href="./#hero-1">Spotlight</a></li>
         <li> <a href="./#about-container">About Us</a>       </li>
         <li><a href="/services" className="href">Services</a></li>
          
         <li><a href="../../meet_the_team">Contact Us</a></li>
-        <li><a href="../../Immunizations">Immunizations</a></li>
+       
        
         
     </ul>

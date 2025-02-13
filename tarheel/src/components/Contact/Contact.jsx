@@ -1,9 +1,12 @@
-import React, {useEffect, useRef} from 'react'
-import {motion, useInView} from 'framer-motion'
+import React, {useEffect, useRef, useState} from 'react'
+import { useInView} from 'framer-motion'
 import './Contact.css'
+// email library used
+import emailjs from '@emailjs/browser';
 
 import phoneicon from '../../assets/phone-icon.png'
 import emailicon from '../../assets/mail-icon.png'
+import faxicon from '../../assets/faxicon.png'
 import locicon from '../../assets/loc-icon.png'
 import time from '../../assets/time1.png'
 import close from '../../assets/closed.png'
@@ -21,10 +24,36 @@ const Contact = () => {
   const contactref = useRef(null);
   const iscontactView = useInView(contactref, { once: true }); // Only trigger once when in view
 
+  const form = useRef();
+  const [successMessage, setSuccessMessage] = useState('');
+
+
   useEffect(() => {
     console.log('is contact view ->', iscontactView);
     
   }, [iscontactView ]);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_tarheeltowns', 'template_email_tarheel', form.current, {
+        publicKey: 'r-EeqFSjp7hVMHquD',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setSuccessMessage('Your message has been sent successfully!');
+          form.current.reset(); //  Clear the form
+          setTimeout(() => setSuccessMessage(''), 5000);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setSuccessMessage('Failed to send message. Please try again.');
+        },
+      );
+  };
+
   return (
     <div className="cc" id="contact-container">
        
@@ -33,14 +62,17 @@ const Contact = () => {
     <div class="main-wrapper">
         <div className="form-column">
       <h2 class="form-head">Get in Touch</h2>
-      <form class="form-wrapper">
+      {/*  Display Success Message */}
+      {successMessage && <p className="success-message">{successMessage}</p>}
+
+      <form class="form-wrapper" ref={form} onSubmit={sendEmail}>
         <div class="form-card">
-          <input class="form-input" type="text" name="full_name" required="required"   />
+          <input class="form-input" type="text" name="from_name" required="required"   />
           <label class="form-label" for="full_name">Full Name</label>
         </div>
 
         <div class="form-card">
-          <input class="form-input" type="email" name="email"  required="required"/>
+          <input class="form-input" type="email" name="from_email"  required="required"/>
           <label class="form-label" for="email">Email</label>
         </div>
 
@@ -54,7 +86,7 @@ const Contact = () => {
             class="form-textarea"
             maxlength="420"
             rows="3"
-            name="phone_number"
+            name="message"
             required="required"
           ></textarea>
           <label class="form-textarea-label" for="phone_number"
@@ -84,7 +116,7 @@ const Contact = () => {
         <div className="vertical-div" />
         <div className="info">
         {/* Right Side - Google Maps and Contact Information */}
-        <motion.h6 ref = {contactref} className="form-head" initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants}>Meet Us</motion.h6>
+        <h6 ref = {contactref} className="form-head" initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants}>Meet Us</h6>
 
         <div className="contact-info">
           {/* <div className="map">
@@ -103,23 +135,26 @@ const Contact = () => {
           
           
             
-            <motion.ul class="meetus">
-              <motion.li ref = {contactref} initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants} class="label"><img class="iimg" src={phoneicon}/>+1 919-240-7827</motion.li>
+            <ul class="meetus">
+              <li ref = {contactref}  class="label"><img class="iimg" src={phoneicon}/>+1 919-240-7827</li>
               
-              <motion.li ref = {contactref} initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants} class="label"><img class="iimg" src={emailicon}/>ttpharmacy17@gmail.com</motion.li>
+              <li ref = {contactref}  class="label"><img class="iimg" src={faxicon}/>919- 714-0505</li>
+
+              <li ref = {contactref}  class="label"><img class="iimg" src={emailicon}/>ttpharmacy17@gmail.com</li>
+
               
-              <motion.li ref = {contactref} initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants} class="label"><img class="iimg" src={locicon}/>370 E Main Street, Suite 160, Carrboro, NC 27510</motion.li>
+              <li ref = {contactref} class="label"><img class="iimg" src={locicon}/>370 E Main Street, Suite 160, Carrboro, NC 27510</li>
               
-            </motion.ul>
-            <motion.h6 ref = {contactref} className="form-head" initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants}>Business hours</motion.h6>
-            <motion.ul class="meetus">
-              <motion.li ref = {contactref} initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants} class="label"><img class="iimg"src={time}/>Weekdays: 8:30 AM - 6:00 PM</motion.li>
+            </ul>
+            <h6 ref = {contactref} className="form-head" initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants}>Business hours</h6>
+            <ul class="meetus">
+              <li ref = {contactref} initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants} class="label"><img class="iimg"src={time}/>Weekdays: 8:30 AM - 6:00 PM</li>
               
-              <motion.li ref = {contactref} initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants} class="label"><img  class="iimg" src={time}/>Saturday: 9:00 AM - 1:00 PM</motion.li>
+              <li ref = {contactref} initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants} class="label"><img  class="iimg" src={time}/>Saturday: 9:00 AM - 1:00 PM</li>
               
-              <motion.li ref = {contactref} initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants} class="label"><img class="close"src={close}/>Sunday: Closed</motion.li>
+              <li ref = {contactref} initial="hidden" animate={iscontactView ? 'visible' : 'hidden'} variants={fadeInUpVariants} class="label"><img class="close"src={close}/>Sunday: Closed</li>
               
-            </motion.ul>
+            </ul>
            
             
           </div>

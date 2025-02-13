@@ -1,5 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef , useState} from 'react'
 import { motion, useInView } from 'framer-motion';
+import Popup from 'reactjs-popup'
+import 'reactjs-popup/dist/index.css'
+
 
 import './Announcement.scss'
 import dev from '../../assets/delivery.png'
@@ -35,6 +38,9 @@ const Announcement = () => {
     console.log('is title spotlight view ->', isspotlightView);
     
   }, [isspotlightView ]);
+
+  
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div class="hero-1" id="hero-1">
@@ -84,7 +90,7 @@ const Announcement = () => {
     <div className="card-title">
         <br />
           <h2>Flu Shots and RSV Vaccinations  Available</h2>
-          <h3>Recommended for Customers 60 and +</h3>
+          
         </div>
         <div className="card-img">
           <img src={vac} alt=""  class="images"/>
@@ -92,7 +98,7 @@ const Announcement = () => {
         
         
     </div>
-    <div className="card">
+    {/* <div className="card">
     <div className="card-title">
           <h2><bold>FREE</bold> Prescription Delivery</h2>
           <h3>Call us at 111-111-1111</h3>
@@ -102,19 +108,69 @@ const Announcement = () => {
         </div>
         
         
-    </div>
-    <div className="card">
-      <div className="card-title">
-          <h2>Prescription Delivery at Carrboro and Chapel Hill Now</h2>
+
+    </div> */}
+
+    {/* Card with Modal Popup */}
+
+    <div className="card" > 
+    <Popup
+              trigger={
+                <div className="card-content" style={{ alignItems :'center'}}>
+                  <div className="card-title">
+                    <h2>Prescription Delivery at Carrboro and Chapel Hill</h2>
+                  </div>
+                  <div className="card-img pop">
+                    <img src={dev} alt="" className="images" style={{ alignItems :'center'}} />
+                  </div>
+                </div>
+              }
+              modal
+              nested
+            >
+              {close => (
+                <div className="popup">
+                  <button className="close" onClick={close}>
+                    &times;
+                  </button>
+                  <div className="header"> Prescription Delivery Details </div>
+                  <div className="content">
+                   
+                     
+                    We understand How busy life can be. Are you <strong>dependent on others </strong> to provide transportation? 
+                    Would you like to get your <strong>prescriptions delivered? </strong> 
+                    
+                    <br /> <br />
+                    Our delivery service operates on <strong>Monday through Friday. </strong>
+                    All orders received before 2 pm will be delivered on the same day. 
+                    Orders received after 2 pm will be delivered the next day.
+                    
+                    <br /> <br />
+                    For more information on our delivery service, contact us by phone, send us a note, or visit the pharmacy. Our professional staff is ready to help.
+                  </div>
+                  {/* <div className="actions">
+                    <button className="button" onClick={close}>
+                      Close
+                    </button>
+                  </div> */}
+                </div>
+              )}
+            </Popup> 
+      {/* <div className="card-title"  >
+          <h2>Prescription Delivery at Carrboro and Chapel Hill</h2>
         </div>
         <div className="card-img">
           <img src={dev} alt=""  class="images"/>
         </div>
-        
-    </div>
+        {modalOpen && <Modal setModalOpen={setModalOpen} />}
+    </div> */}
+       </div>
+          </div>
+        </div>
+    
+    
    </div>
-   </div>
-</div>
+   
   )
 }
 
