@@ -112,10 +112,12 @@ const Announcement = () => {
     </div> */}
 
     {/* Card with Modal Popup */}
-
-    <div className="card " > 
     <Popup
-              trigger={
+    trigger={(open) => (
+    
+    <div className="card " onClick={(e) => e.stopPropagation()}  style={{ cursor: 'pointer', width: '100%', height: '100%'}}> 
+    
+        
                 <div className="card-content " style={{ alignItems :'center'}}>
                   <div className="card-title">
                     <h2>Prescription Delivery at Carrboro and Chapel Hill</h2>
@@ -124,7 +126,9 @@ const Announcement = () => {
                     <img src={dev} alt="" className="images" style={{ alignItems :'center'}} />
                   </div>
                 </div>
-              }
+                </div>
+                
+      )}
               modal
               nested
             >
@@ -169,7 +173,7 @@ const Announcement = () => {
         </div>
     
     
-   </div>
+   
    
   )
 }

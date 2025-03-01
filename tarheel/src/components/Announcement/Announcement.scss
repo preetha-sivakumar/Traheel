@@ -263,12 +263,15 @@ $stars-big: stars(100);
   background-color: rgb(98, 184, 122);
   flex:1;
   margin-right: 10px;
-  
+  display: contents;
+  cursor: pointer;
+  position: relative;
   display: flex; /* Flex container inside each card */
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
 
+  z-index: 10;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow */
   transition: all 0.3s ease; /* Optional: Smooth resizing transition */
 }
@@ -291,7 +294,7 @@ $stars-big: stars(100);
   overflow: hidden;
   width:auto;
   height: 200px;
-  // margin-left: 22%;
+   margin-left: 22%;
   align-items: center!important;
   align-self: center;
   // margin-top: 30px;
