@@ -90,7 +90,7 @@ const Banner1 = () => {
          </div>
           <div className ="Hero_textBlock">
           <p><span className='background'>Visit us or experience swift delivery <br />for all your health essentials.<br />The Pharmacy Experience You Deserve.</span></p>
-          <span className='background'> <button onClick={() => {console.log("Button Clicked"); navigate('/services');}} className='btn-b'>Get Started!</button> </span>
+          <span className='background'> <button onClick={() => {console.log("Button Clicked"); navigate('/services'); window.scrollTo(0, 0);}} className='btn-b'>Get Started!</button> </span>
           </div>
        </div>
         <div class="hero-image">
