@@ -79,6 +79,11 @@
   font-style: bold;
 }
 
+.hero-section .special-hrs.collapsed {
+  display: none;
+}
+
+
 .holiday-list {
   display: flex;
   flex-direction: column; /* Arrange holidays in a vertical column */
@@ -278,5 +283,6 @@
     font-style: italic;
     font-weight: 600;
     text-align: center;
+    padding-bottom: 100px;
     
   }

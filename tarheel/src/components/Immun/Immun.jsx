@@ -79,7 +79,7 @@ const openPdf = (pdfPath) =>{
   return (
     <div className="immunizations-conatiner">
         <div className="banner-i">
-            <h2 class="i-title">Immunizations</h2>
+            <h2 class="i-title">All Age Appropriate Immunizations</h2>
           </div>
           <div className="i-cards">
             <div className="i-left">

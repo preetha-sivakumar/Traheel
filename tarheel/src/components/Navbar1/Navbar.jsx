@@ -20,11 +20,10 @@ const Navbar = () => {
     <img src={logo1} alt=""  class="logo"/>
     <ul className={mobilemenu?'' : 'hide-mobile-menu'}>
         <li><a href="./">Home</a></li>
-        <li><a href="../../Immunizations">Immunizations</a></li>
-        <li><a href="./#hero-1">Spotlight</a></li>
         <li> <a href="./#about-container">About Us</a>       </li>
         <li><a href="/services" className="href">Services</a></li>
-         
+        <li><a href="../../Immunizations">Immunizations</a></li>
+        <li><a href="./#hero-1">Spotlight</a></li>       
         <li><a href="../../meet_the_team">Contact Us</a></li>
        
        

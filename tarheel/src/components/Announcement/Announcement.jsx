@@ -113,10 +113,10 @@ const Announcement = () => {
 
     {/* Card with Modal Popup */}
 
-    <div className="card" > 
+    <div className="card " > 
     <Popup
               trigger={
-                <div className="card-content" style={{ alignItems :'center'}}>
+                <div className="card-content " style={{ alignItems :'center'}}>
                   <div className="card-title">
                     <h2>Prescription Delivery at Carrboro and Chapel Hill</h2>
                   </div>

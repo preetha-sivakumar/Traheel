@@ -90,7 +90,7 @@ const About = ({ children }) => {
                 </motion.h3>
                 <motion.h3  ref = {ref3}className="ah3" initial="hidden" animate={isheading1View ? 'visible' : 'hidden'} variants={fadeInUpVariants}>We're Here for You.</motion.h3>
                 <motion.p ref = {ref4}className="descrip" initial="hidden" animate={isdescView  ? 'visible' : 'hidden'} variants={fadeInUpVariants}>
-                  Our goal at Tarheel Pharmacy is to deliver friendly, compassionate care while
+                  Our goal at Tarheel Towns Pharmacy is to deliver friendly, compassionate care while
                   providing the highest quality of pharmaceutical services.
                   <br />
                   <br />

@@ -110,7 +110,7 @@ left: 0;
   position: absolute;
   max-width:50%;
   
-  margin-left: 20px;
+  /* margin-left: 20px; */
   z-index: 3;
   top: 90%;
   right: 40%;

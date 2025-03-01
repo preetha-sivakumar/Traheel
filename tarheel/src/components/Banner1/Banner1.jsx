@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react'
 
+import { useNavigate } from 'react-router-dom';
 import './Banner1.css'
 import heroguy from '../../assets/hero-guy1.png'
 import plus1 from '../../assets/plus.png'
@@ -7,9 +8,11 @@ import plus2 from '../../assets/plus2.png'
 const Banner1 = () => {
 
   
-
+  const navigate = useNavigate();
   const [holidayHours, setHolidayHours] = useState([]);
   const [spotlightContent, setSpotlightContent] = useState([]);
+  
+  const [isVisible, setIsVisible] = useState(false);
   
   // Fetch holiday hours from localStorage on mount
   useEffect(() => {
@@ -19,48 +22,38 @@ const Banner1 = () => {
     const storedSpotlight = JSON.parse(localStorage.getItem('spotlightContent')) || [];
     setSpotlightContent(storedSpotlight);
 
+    setIsVisible(storedHolidays.length > 0); // show if holidayHours exist
+
   }, []);
 
   return (
+    <div>
+    
     <div className ='hero-section'>
        <p className="tagline-top">
        Local. Independent. LGBTQ+ Inclusive.<br /> Proudly serving the TarHeel Towns since 2017
     </p>
+    {/* Conditionally collapse .special-hrs */}
+    {spotlightContent.length > 0 && (
       <div className="special-hrs">
-       
-        <div className="content">
-          {/* <div className="content-hrs">
-
-          
-            <h3>Holiday Hours:</h3>
-            <br />
-            <div className="holiday-grid">
-            {holidayHours.length > 0 ? (
-          holidayHours.map((holiday, index) => (
-            <div className="holiday-item" key={index}>
-            <strong>{holiday.day}:</strong> {holiday.description}
-          </div>
-          ))
-        ) : (
-          <p>No holiday hours set.</p>
-        )}
-        </div>
-        </div> */}
-       
+           <div className="content">
+               
       <div className="news">
      
-         <h3 className='newsh3'>Announcements:</h3>
-            <br />
-            <div className="holiday-grid1">
-            {spotlightContent.length > 0 ? (
-              spotlightContent.map((Spotlight, index) => (
-                <div className="holiday-item1" key={index}>
-                  <strong>{Spotlight.title}:</strong> {Spotlight.desc}
-                </div>
-              ))
-            ) : (
-              <p>No announcements yet.</p>
-            )}
+      
+  <div>
+    <h3 className='newsh3'>Announcements:</h3>
+    <br />
+    <div className="holiday-grid1">
+      {spotlightContent.map((Spotlight, index) => (
+        <div className="holiday-item1" key={index}>
+          <strong>{Spotlight.title}:</strong> {Spotlight.desc}
+        </div>
+      ))}
+    </div>
+  </div>
+
+
 
 {/* <h3>Holiday Hours:</h3>
             <br />
@@ -77,6 +70,7 @@ const Banner1 = () => {
           </div>
         </div>
         </div>
+    )}
       </div> 
      
       
@@ -96,7 +90,7 @@ const Banner1 = () => {
          </div>
           <div className ="Hero_textBlock">
           <p><span className='background'>Visit us or experience swift delivery <br />for all your health essentials.<br />The Pharmacy Experience You Deserve.</span></p>
-          <span className='background'> <button to="/services" className='btn-b' >Get Started!</button> </span>
+          <span className='background'> <button onClick={() => {console.log("Button Clicked"); navigate('/services');}} className='btn-b'>Get Started!</button> </span>
           </div>
        </div>
         <div class="hero-image">
@@ -192,7 +186,7 @@ const Banner1 = () => {
 
 </div>
         
-        
+     
     
   )
 }
